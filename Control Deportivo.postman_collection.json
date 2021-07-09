@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "663c7285-f04a-49d8-a0fd-35c720c4de27",
+		"name": "Control Deportivo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "Crear Cuanta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "correo",
+									"value": "vlammi@vlammi.com",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Vlammir",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/agregarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"agregarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Administrador",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "getToken",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGQ3OTM1MmY4NmFiODI1NmNiMmQ2M2EiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2MjQ4NDIyNTAsImV4cCI6MTYyNTcwNjI1MH0.wDIwWm2c2uo1bfpYZz4RC6m1rbgtjg62WY4PILSW5eA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/api/eliminarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"eliminarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGQ5MjA4MDA4MjBlZTIzNjQ4MWYzNGQiLCJ1c2VybmFtZSI6IlZsYW1taXIiLCJjb3JyZW8iOiJ2bGFtbWlAdmxhbW1pLmNvbSIsInJvbCI6IlJPTF9DTElFTlRFIiwiaWF0IjoxNjI0ODQyNzM0LCJleHAiOjE2MjU3MDY3MzR9.p6hvBXYqGtiOliQx3oQsOvRsSSmMvoJ6SbaNGBe15dw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Vlammir",
+									"type": "text"
+								},
+								{
+									"key": "correo",
+									"value": "vlammi@vlammi.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/editarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"editarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGQ3OTM1MmY4NmFiODI1NmNiMmQ2M2EiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2MjQ4NDI3MTIsImV4cCI6MTYyNTcwNjcxMn0.vCj5t47GMHHa6q260d2REtQNA5WhML6WD3nlON2sfPc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGQ3OTM1MmY4NmFiODI1NmNiMmQ2M2EiLCJ1c2VybmFtZSI6IkFkbWluaXN0cmFkb3IiLCJjb3JyZW8iOiJhZG1pbkBhZG1pbi5jb20iLCJyb2wiOiJST0xfQURNSU4iLCJpYXQiOjE2MjQ4NDMxODgsImV4cCI6MTYyNTcwNzE4OH0.h9p5lyCk-HLRFNhtn9MWW30RvZjqwackQrWC_nBgT6E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/obtenerUsuario/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"obtenerUsuario",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "Vlammir"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ligas",
+			"item": []
+		}
+	]
+}
